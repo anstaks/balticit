@@ -55,6 +55,8 @@ a.btop-third-link {width:50%;display: table-cell; vertical-align:middle;  text-a
 a.project-close {background:url(../img/close.png); width:33px; height:33px; float:right; text-decoration:none;}
 .project-body {color:#fff;overflow:hidden;padding:0 20px 0 0;}
 
+.footer {padding:50px 0 20px 0; color:#888;}
+
 .fade { @include transition(opacity 0.4s linear);}
 
 @media (max-width: 979px) {

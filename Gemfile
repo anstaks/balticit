@@ -54,3 +54,5 @@ group :development do
   #refactoring
   gem 'rails_best_practices', require: false
 end
+
+# gem 'rename' | For rename project with one comand "rails g rename:app_to New-Name"

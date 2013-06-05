@@ -1,4 +1,4 @@
-Glance::Application.routes.draw do
+Balticit::Application.routes.draw do
   resources :pages
 
   root :to => 'pages#home'

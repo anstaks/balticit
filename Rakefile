@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Glance::Application.load_tasks
+Balticit::Application.load_tasks

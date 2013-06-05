@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="wrapper">
+    <div class="row-fluid">
+      <div class="span12">
+        <%# It is insert menu from Refinery CMS
+          = render(:partial => "/refinery/menu", :locals => {:dom_id => 'header-menu', :css => 'header-menu' }) %>
+        <nav class="header-menu">
+          <ul>
+            <li class="item-1 active"><a href="#"><span>Проекты</span></a></li>
+            <li class="item-2"><a href="#"><span>Контакты</span></a></li>
+            <li class="item-3"><a href="#"><span>Нам доверяют</span></a></li>
+          </ul>
+        </nav>
+        <%= link_to image_tag("logo.png", :alt => 'BalticIT'), root_path, class:'header-logo' %>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,7 +1,5 @@
 Glance::Application.routes.draw do
-  root :to => 'page#home'
-
-  get "page/show"
+  root :to => 'pages#show'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

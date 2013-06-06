@@ -4,10 +4,10 @@
     <div class="portfolio-deg">
       <p class="portfolio-text">
         <strong class="portfolio-name"><%= project.title %></strong>
-        <span class="portfolio-desc">We teamed up with our favorite newspaper printers to create a 2012 calendar.  Each of the...
+        <span class="portfolio-desc"><%= project.content %>
         </span>
       </p>
-      <div class="portfolio-deg-after">
+      <div class="portfolio-deg-after" style="background:<%= project.preview_background %>">
       </div>
     </div>
   </a>

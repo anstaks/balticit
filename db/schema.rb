@@ -75,8 +75,8 @@ ActiveRecord::Schema.define(:version => 20130606080723) do
     t.string   "content"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
-    t.string   "preview_color"
-    t.string   "project_background"
+    t.string   "preview_background"
+    t.string   "background_uid"
   end
 
 end

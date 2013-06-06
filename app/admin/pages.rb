@@ -22,6 +22,7 @@ ActiveAdmin.register Page do
       f.input :title
       f.input :alias, :label => "Псевдоним"
       f.input :description
+      f.input :keywords
     end
     f.inputs "Content" do
       f.input :content, :label => false, as: :wysihtml5, commands: :all, blocks: :all

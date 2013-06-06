@@ -1,4 +1,8 @@
 Balticit::Application.routes.draw do
+  get "projects/index"
+
+  get "projects/show"
+
   root :to => 'pages#home'
 
   devise_for :admin_users, ActiveAdmin::Devise.config

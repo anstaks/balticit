@@ -1,5 +1,6 @@
 # Encoding: utf-8
 ActiveAdmin.register Page do
+  config.batch_actions = false
   scope :all, :default => true
   scope :no_seo
 

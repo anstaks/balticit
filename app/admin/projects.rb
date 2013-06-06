@@ -7,9 +7,35 @@ ActiveAdmin.register Project do
     column :id
     column 'Заголовок', :title
     column 'Описание', :content, sortable:false
-    column :preview_background, sortable:false
-    column :background, sortable:false
+    column 'Фон превью', :preview_background, sortable:false do |bg|
+        raw '<div style="width:100px;height:50px;background:'+bg.preview_background+'">&nbsp;</div>'
+    end
+    column 'Большой фон', :background_uid do |bg|
+      image_tag bg.background.thumb('100x100').url if bg.background_uid
+    end
     default_actions
+  end
+
+  show do
+    h3 :title
+    div do
+      simple_format :id
+    end
+  end
+
+  show do |f|
+    attributes_table do
+      row :id
+      row :title
+      row :content
+      row :preview_background do |bg|
+        raw '<div style="width:100px;height:50px;background:'+bg.preview_background+'">&nbsp;</div>'
+      end
+      row :background_uid do |bg|
+        image_tag bg.background.thumb('100x100').url if bg.background_uid
+      end
+    end
+    active_admin_comments
   end
 
   form do |f|

@@ -16,6 +16,9 @@
 </div>
 <div class="wrapper">
   <div class="row-fluid portfolio">
-    <%= render :partial => "shared/project", :collection => @projects %>
+    <% @projects.each_with_index do |project, index| %>
+      <% first_class = 'portfolio-first-line' if index%4 == 0  %>
+      <%= render "shared/project",project: project, first_class: first_class %>
+    <% end %>
   </div>
 </div>

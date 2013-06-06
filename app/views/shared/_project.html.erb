@@ -1,11 +1,10 @@
-<div class="span3 portfolio-item portfolio-first-line">
+<div class="span3 portfolio-item <%= first_class %>">
   <a href="#" class="portfolio-link">
-    <img src="img/woman.jpg">
+    <%= image_tag project.background.thumb('226x190#').url if project.background_uid %>
     <div class="portfolio-deg">
       <p class="portfolio-text">
         <strong class="portfolio-name"><%= project.title %></strong>
-        <span class="portfolio-desc"><%= project.content %>
-        </span>
+        <span class="portfolio-desc"><%= project.content %></span>
       </p>
       <div class="portfolio-deg-after" style="background:<%= project.preview_background %>">
       </div>

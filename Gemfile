@@ -8,6 +8,8 @@ gem 'rails', '3.2.13'
 gem 'mysql2'
 
 gem 'activeadmin'
+gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
+gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -24,7 +24,7 @@ ActiveAdmin.register Page do
       f.input :description
     end
     f.inputs "Content" do
-      f.input :content, :as => :html_editor, :input_html => { :class => 'autogrow', :rows => 10, :cols => 20, :maxlength => 10  }
+      f.input :content, :label => false, as: :wysihtml5, commands: :all, blocks: :all
     end
     f.actions
   end

@@ -1,3 +1,19 @@
+GIT
+  remote: git://github.com/stefanoverna/activeadmin-dragonfly.git
+  revision: d39f4689c92b79d051bb079cd2a7d98359f00b83
+  specs:
+    activeadmin-dragonfly (0.0.2)
+      activeadmin
+      dragonfly
+
+GIT
+  remote: git://github.com/stefanoverna/activeadmin-wysihtml5.git
+  revision: e80c6cd5a1e76dd2fb5f36a3b146eb029577789a
+  specs:
+    activeadmin-wysihtml5 (0.3.6)
+      activeadmin
+      activeadmin-dragonfly
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -110,6 +126,9 @@ GEM
       railties (~> 3.1)
       warden (~> 1.2.1)
     diff-lcs (1.2.1)
+    dragonfly (0.9.15)
+      multi_json (~> 1.0)
+      rack
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (1.4.0)
@@ -256,6 +275,8 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  activeadmin-dragonfly!
+  activeadmin-wysihtml5!
   better_errors
   binding_of_caller
   bootstrap-sass

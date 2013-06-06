@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130605134105) do
+ActiveRecord::Schema.define(:version => 20130606072927) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -45,6 +45,20 @@ ActiveRecord::Schema.define(:version => 20130605134105) do
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+
+  create_table "assets", :force => true do |t|
+    t.string   "storage_uid"
+    t.string   "storage_name"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.integer  "storage_width"
+    t.integer  "storage_height"
+    t.float    "storage_aspect_ratio"
+    t.integer  "storage_depth"
+    t.string   "storage_format"
+    t.string   "storage_mime_type"
+    t.string   "storage_size"
+  end
 
   create_table "pages", :force => true do |t|
     t.string   "title"

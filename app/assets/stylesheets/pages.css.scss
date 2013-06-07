@@ -48,11 +48,11 @@ a.btop-third-link {width:50%;display: table-cell; vertical-align:middle;  text-a
 .portfolio-name {display:block; font-size:18px;color:#222;width:60%;}
 .portfolio-desc {display:block; font-size:13px; line-height:15px; padding:10px 0 0; color:#222; display:block;width:80%; }
 
-.project {width:100%;height:100%;margin:0;top:0 !important; left:0;display:none;position: fixed;background:#333 url(../img/white-angle.png) right center no-repeat;z-index:10;@include box-sizing(border-box); padding:40px 0;}
+.project {width:100%;height:100%;margin:0;top:0 !important; left:0;display:none;position: fixed;background:#333 url(white-angle.png) right center no-repeat;z-index:10;@include box-sizing(border-box); padding:40px 0;}
 .project-header {color:#fff;}
 .project-header-h3 {font-size:18px;}
 .project-header-p {font-size:13px; }
-a.project-close {background:url(../img/close.png); width:33px; height:33px; float:right; text-decoration:none;}
+a.project-close {background:url(close.png); width:33px; height:33px; float:right; text-decoration:none;}
 .project-body {color:#fff;overflow:hidden;padding:0 20px 0 0;}
 
 .footer {padding:50px 0 20px 0; color:#888;}

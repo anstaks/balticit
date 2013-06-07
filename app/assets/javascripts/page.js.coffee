@@ -13,10 +13,14 @@ $(document).ready ->
     .done (data) ->
       console.log(data)
       $("#project").modal backdrop: false
-      $("body").append JST["templates/projects/show"]({project: data})
+      $("#project").html JST["templates/projects/show"]({project: data})
     .fail ->
       alert 'Error'
     return false
+
+
+  $(document).on 'click', '#project-close', ->
+    $("#project").modal "hide"
 
     # $("#project").modal backdrop: false
     # if isMobile

@@ -1,1 +1,10 @@
-<h1><%= @project.content %></h1>
+<div class="wrapper wrapper-modal">
+  <div class="project-header">
+    <a class="project-close" href="#" id="project-close">&nbsp;</a>
+    <h3 class="project-header-h3">Mr. Freeman</h3>
+    <p class="project-header-p">Сайт группы «МЭФ-Аудит» играет важную роль в формировании имиджа компании и позиционировании бренда. Лаконичный дизайн отражает уверенность бренда в своих позициях, удобная навигация позволяет пользователям без труда ориентироваться во всем многообразии предоставляемых услуг, наличие мультиязычных версий сайта облегчает коммуникацию с иностранными партнерами группы.</p>
+  </div>
+  <div class="project-body" id="project-body">
+    <%= @project.content %>
+  </div>
+</div>

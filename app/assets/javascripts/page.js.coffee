@@ -10,8 +10,10 @@ $(document).ready ->
     id = $(this).parent().data().id
     $.ajax "/projects/#{id}",
       method: 'get'
-    .done ->
-      $("body").append JST["templates/projects/show"]
+    .done (data) ->
+      console.log(data)
+      $("#project").modal backdrop: false
+      $("body").append JST["templates/projects/show"]({project: data})
     .fail ->
       alert 'Error'
     return false

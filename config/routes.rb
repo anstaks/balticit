@@ -1,7 +1,4 @@
 Balticit::Application.routes.draw do
-  get "projects/index"
-
-  get "projects/show"
 
   root :to => 'pages#home'
 
@@ -9,7 +6,7 @@ Balticit::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :pages
-
+  resources :projects
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

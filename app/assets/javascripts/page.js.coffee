@@ -7,19 +7,28 @@ $(document).ready ->
   setInterval porfolioShow, 200
   isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)
   $(".portfolio-link").on "click", (event) ->
-    $("#project").modal backdrop: false
-    if isMobile
-      $("#project").css "min-height", $(window).height() + "px"
-      $("#page").hide()
-    else
-      $("body").addClass "no-scroll"
-      $("#project-body").css("height", $(window).height() - 250 + "px").jScrollPane()
-    false
+    id = $(this).parent().data().id
+    $.ajax "/projects/#{id}",
+      method: 'get'
+    .done ->
+      $("body").append JST["templates/projects/show"]
+    .fail ->
+      alert 'Error'
+    return false
 
-  $("#project-close").on "click", (event) ->
-    $("#project").modal "hide"
-    if isMobile
-      $("#page").show()
-    else
-      $("body").removeClass "no-scroll"
-    false
+    # $("#project").modal backdrop: false
+    # if isMobile
+    #   $("#project").css "min-height", $(window).height() + "px"
+    #   $("#page").hide()
+    # else
+    #   $("body").addClass "no-scroll"
+    #   $("#project-body").css("height", $(window).height() - 250 + "px").jScrollPane()
+    # false
+
+  # $("#project-close").on "click", (event) ->
+  #   $("#project").modal "hide"
+  #   if isMobile
+  #     $("#page").show()
+  #   else
+  #     $("body").removeClass "no-scroll"
+  #   false

@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-modal
+//= require jquery.jscrollpane.min
+//= require jquery.mousewheel
 //= require_tree .

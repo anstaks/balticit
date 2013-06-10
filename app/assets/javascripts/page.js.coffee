@@ -12,29 +12,31 @@ $(document).ready ->
       method: 'get'
     .done (data) ->
       console.log(data)
+      $('body').append JST["templates/projects/show"]({project: data})
+
+      $("#project-body").css("height", $(window).height() - 250 + "px").jScrollPane()
       $("#project").modal backdrop: false
-      $("#project").html JST["templates/projects/show"]({project: data})
+
+      if isMobile
+        $("#project").css "min-height", $(window).height() + "px"
+        $("#page").hide()
+      else
+        $("body").addClass "no-scroll"
+      false
+
     .fail ->
       alert 'Error'
     return false
 
 
   $(document).on 'click', '#project-close', ->
-    $("#project").modal "hide"
+    $("#project").removeClass('in')
+    setTimeout ->
+      $("#project").remove()
+      if isMobile
+        $("#page").show()
+      else
+        $("body").removeClass "no-scroll"
+      false
+    , 500
 
-    # $("#project").modal backdrop: false
-    # if isMobile
-    #   $("#project").css "min-height", $(window).height() + "px"
-    #   $("#page").hide()
-    # else
-    #   $("body").addClass "no-scroll"
-    #   $("#project-body").css("height", $(window).height() - 250 + "px").jScrollPane()
-    # false
-
-  # $("#project-close").on "click", (event) ->
-  #   $("#project").modal "hide"
-  #   if isMobile
-  #     $("#page").show()
-  #   else
-  #     $("body").removeClass "no-scroll"
-  #   false

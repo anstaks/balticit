@@ -6,7 +6,7 @@ ActiveAdmin.register Project do
   index do
     column :id
     column 'Заголовок', :title
-    column 'Описание', :content, sortable:false
+    column 'Описание', :description, sortable:false
     column 'Фон превью', :preview_background, sortable:false do |bg|
         raw '<div style="width:100px;height:50px;background:'+bg.preview_background+'">&nbsp;</div>'
     end
@@ -27,6 +27,7 @@ ActiveAdmin.register Project do
     attributes_table do
       row :id
       row :title
+      row :description
       row :content
       row :preview_background do |bg|
         raw '<div style="width:100px;height:50px;background:'+bg.preview_background+'">&nbsp;</div>'
@@ -42,8 +43,11 @@ ActiveAdmin.register Project do
     f.inputs "Details" do
       f.input :background, as: :dragonfly, input_html: { components: [:preview, :upload ] }
       f.input :title
-      f.input :content
+      f.input :description
       f.input :preview_background
+    end
+    f.inputs "Content" do
+      f.input :content, :label => false, as: :wysihtml5, commands: :all, blocks: :all
     end
     f.actions
   end

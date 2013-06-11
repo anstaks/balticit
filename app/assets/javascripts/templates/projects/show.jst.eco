@@ -1,4 +1,5 @@
-<div class="fade project" id="project">
+<div class="fade project" id="project" style="background-image:url(<%= @project.background_url %>)">
+  <div class="project-angle"></div>
   <div class="wrapper wrapper-modal">
     <div class="project-header">
       <a class="project-close" href="#" id="project-close">&nbsp;</a>

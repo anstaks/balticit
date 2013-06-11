@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130610085109) do
+ActiveRecord::Schema.define(:version => 20130611072627) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20130610085109) do
     t.string   "preview_background"
     t.string   "background_uid"
     t.text     "description"
+    t.string   "preview_image_uid"
   end
 
 end

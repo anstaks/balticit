@@ -1,6 +1,6 @@
 <div class="span3 portfolio-item <%= first_class %>" data-id="<%= project.id %>">
   <a href="#" class="portfolio-link">
-    <%= image_tag project.background.thumb('226x190#').url if project.background_uid %>
+    <%= image_tag project.preview_image.thumb('226x190#').url if project.preview_image_uid %>
     <div class="portfolio-deg">
       <p class="portfolio-text">
         <strong class="portfolio-name"><%= project.title %></strong>

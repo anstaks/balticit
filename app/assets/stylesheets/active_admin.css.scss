@@ -29,5 +29,7 @@
 // .other_namespace    applies to a custom namespace named other (eg: /other)
 
 .dragonfly .input label {display:none;}
+.dragonfly legend {display:block !important; padding:10px !important;}
+.dragonfly legend label {display:block;}
 .dragonfly .input {padding:5px 0 5px 10px;}
 .dragonfly .component-url label {display:block;width:auto;padding:6px 10px 0 0;}

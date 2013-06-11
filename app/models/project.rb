@@ -10,4 +10,5 @@ class Project < ActiveRecord::Base
   def preview_image_url
     self.preview_image.url
   end
+
 end

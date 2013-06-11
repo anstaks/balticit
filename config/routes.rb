@@ -7,6 +7,7 @@ Balticit::Application.routes.draw do
 
   resources :pages
   resources :projects
+  get ':alias' => 'pages#show', :as => :alias
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

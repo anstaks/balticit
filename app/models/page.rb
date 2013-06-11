@@ -3,6 +3,4 @@ class Page < ActiveRecord::Base
 
   scope :no_seo, where(keywords:'',description:'')
 
-  extend FriendlyId
-  friendly_id :alias
 end

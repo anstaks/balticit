@@ -14,7 +14,7 @@ $(document).ready ->
       console.log(data)
       $('body').append JST["templates/projects/show"]({project: data})
 
-      $("#project-body").css("height", $(window).height() - 250 + "px").jScrollPane()
+      $("#project-body").css("height", $(window).height() - 250 + "px").mCustomScrollbar()
       $("#project").modal backdrop: false
 
       if isMobile

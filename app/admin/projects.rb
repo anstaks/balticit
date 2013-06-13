@@ -1,5 +1,7 @@
 # Encoding: utf-8
 ActiveAdmin.register Project do
+  menu :label => 'Портфолио', :priority => 2
+
   config.batch_actions = false
   scope :all, :default => true
 

@@ -21,13 +21,6 @@ ActiveAdmin.register Project do
     default_actions
   end
 
-  show do
-    h3 :title
-    div do
-      simple_format :id
-    end
-  end
-
   show do |f|
     attributes_table do
       row :id

@@ -11,6 +11,8 @@ gem 'activeadmin'
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
 
+gem "friendly_id"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

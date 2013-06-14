@@ -16,6 +16,7 @@ ActiveAdmin.register Page do
         array.count.to_s + ' keywords'
       end
     end
+    column "Скрытый", :hidden
     default_actions
   end
 
@@ -25,6 +26,7 @@ ActiveAdmin.register Page do
       f.input :alias, :label => "Псевдоним"
       f.input :description
       f.input :keywords
+      f.input :hidden, label:"Скрыть пункт меню"
     end
     f.inputs "Content" do
       f.input :content, :label => false, as: :wysihtml5, commands: :all, blocks: :all

@@ -8,7 +8,7 @@ $short-sprite-dimensions: true;
 .wrapper-modal {padding:0 330px 0 0; @include box-sizing(border-box); position:relative; z-index:10; }
 
 .header {}
-.header .span12 {padding:40px 0px 40px 50px;}
+.header .span12 {padding:40px 0px 40px 0px;}
 .header-logo {}
 .header-menu {float:right; padding:36px 0 0 0;}
 .header-menu ul {margin:0; padding:0; list-style: none;}
@@ -55,6 +55,9 @@ a.btop-third-link {width:50%;display: table-cell; vertical-align:middle;  text-a
 .project-header-p {font-size:13px; }
 a.project-close {background:url(close.png); width:33px; height:33px; float:right; text-decoration:none;}
 .project-body {color:#fff;overflow:hidden;padding:0 0px 0 0;}
+
+.content {min-height:300px;}
+.content h1 {font-size:26px;}
 
 .footer {padding:50px 0 20px 0; color:#888;}
 

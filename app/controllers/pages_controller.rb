@@ -4,6 +4,6 @@ class PagesController < ApplicationController
   end
 
   def show
-    @page = Page.find_by_alias(params[:alias]) || Page.find(params[:alias])
+    @page = Page.find_by_slug(params[:slug]) || Page.find(params[:slug])
   end
 end

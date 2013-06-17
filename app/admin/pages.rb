@@ -6,7 +6,7 @@ ActiveAdmin.register Page do
   index do
     column :id
     column 'Заголовок', :name
-    column 'Псевдоним',:alias, sortable:false
+    column 'Псевдоним',:slug, sortable:false
     column "Скрытый", :hidden
     default_actions
   end
@@ -14,7 +14,7 @@ ActiveAdmin.register Page do
   form do |f|
     f.inputs "Основное" do
       f.input :name, label:'Заголовок для меню'
-      f.input :alias, label:'Псевдоним для seo'
+      f.input :slug, label:'Псевдоним для seo'
       f.input :hidden, label:"Скрыть пункт меню"
     end
     f.inputs "Контент" do

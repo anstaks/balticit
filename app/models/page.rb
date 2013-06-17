@@ -1,6 +1,6 @@
 class Page < ActiveRecord::Base
-  attr_accessible :alias, :content, :name, :hidden
+  attr_accessible :slug, :content, :name, :hidden
 
   extend FriendlyId
-  friendly_id :alias
+  friendly_id :slug
 end

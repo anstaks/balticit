@@ -1,13 +1,4 @@
 GIT
-  remote: git://github.com/nebirhos/activeadmin-seo.git
-  revision: 2bee7d380a766dd8e3be6ccad346507d481a2583
-  specs:
-    activeadmin-seo (0.0.1)
-      activeadmin (~> 0.5.0)
-      activeadmin-dragonfly
-      friendly_id (~> 4.0.0)
-
-GIT
   remote: git://github.com/stefanoverna/activeadmin-dragonfly.git
   revision: d39f4689c92b79d051bb079cd2a7d98359f00b83
   specs:
@@ -273,7 +264,6 @@ PLATFORMS
 DEPENDENCIES
   activeadmin (~> 0.5.0)
   activeadmin-dragonfly!
-  activeadmin-seo!
   better_errors
   binding_of_caller
   bootstrap-sass
@@ -285,6 +275,7 @@ DEPENDENCIES
   debugger
   eco
   factory_girl_rails
+  friendly_id
   jquery-rails (~> 2.2.1)
   letter_opener
   mysql2

@@ -1,14 +1,14 @@
 Balticit::Application.routes.draw do
 
   root :to => 'pages#home'
-  # Для того что бы перенаправить на первую страницу экшна show    root :to => "pages#show", :alias => '1'
+  # Для того что бы перенаправить на первую страницу экшна show    root :to => "pages#show", :slug => '1'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
   resources :pages
   resources :projects
-  get ':alias' => 'pages#show', :as => :alias
+  get ':slug' => 'pages#show', :as => :slug
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

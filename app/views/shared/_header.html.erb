@@ -7,7 +7,7 @@
             <li class="item-1 <%= cp(root_path) %>"><%= link_to content_tag(:span,'Проекты'), root_path %></li>
             <% Page.all.each do |page| %>
               <% unless page.hidden? %>
-              <li class="item-<%= (page.id+1).to_s %> <%= cp(alias_path(page)) %>"><%= link_to content_tag(:span,page.title), alias_path(page) %></li>
+              <li class="item-<%= (page.id+1).to_s %> <%= cp(alias_path(page)) %>"><%= link_to content_tag(:span,page.name), alias_path(page) %></li>
               <% end %>
             <% end %>
           </ul>

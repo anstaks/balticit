@@ -65,40 +65,24 @@ ActiveRecord::Schema.define(:version => 20130617102451) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
-  create_table "assets", :force => true do |t|
-    t.string   "storage_uid"
-    t.string   "storage_name"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
-    t.integer  "storage_width"
-    t.integer  "storage_height"
-    t.float    "storage_aspect_ratio"
-    t.integer  "storage_depth"
-    t.string   "storage_format"
-    t.string   "storage_mime_type"
-    t.string   "storage_size"
-  end
-
   create_table "pages", :force => true do |t|
-    t.string   "title"
+    t.string   "name"
     t.string   "alias"
-    t.string   "description"
-    t.string   "keywords"
     t.text     "content"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
-    t.boolean  "hidden",      :default => false
+    t.boolean  "hidden",     :default => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "projects", :force => true do |t|
-    t.string   "title"
+    t.string   "name"
     t.text     "content"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.text     "intro"
+    t.string   "preview_image_uid"
     t.string   "preview_background"
     t.string   "background_uid"
-    t.text     "description"
-    t.string   "preview_image_uid"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
 end

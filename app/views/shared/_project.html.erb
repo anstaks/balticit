@@ -3,8 +3,8 @@
     <%= image_tag project.preview_image.thumb('226x190#').url if project.preview_image_uid %>
     <div class="portfolio-deg">
       <p class="portfolio-text">
-        <strong class="portfolio-name"><%= project.title %></strong>
-        <span class="portfolio-desc"><%= project.description %></span>
+        <strong class="portfolio-name"><%= project.name %></strong>
+        <span class="portfolio-desc"><%= project.intro %></span>
       </p>
       <div class="portfolio-deg-after" style="background:<%= project.preview_background %>">
       </div>

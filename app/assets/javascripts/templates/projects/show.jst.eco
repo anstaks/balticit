@@ -3,8 +3,8 @@
   <div class="wrapper wrapper-modal">
     <div class="project-header">
       <a class="project-close" href="#" id="project-close">&nbsp;</a>
-      <h3 class="project-header-h3"><%= @project.title %></h3>
-      <p class="project-header-p"><%= @project.description %></p>
+      <h3 class="project-header-h3"><%= @project.name %></h3>
+      <p class="project-header-p"><%= @project.intro %></p>
     </div>
     <div class="project-body" id="project-body">
       <%= @project.content %>

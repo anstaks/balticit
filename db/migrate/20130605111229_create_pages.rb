@@ -1,11 +1,10 @@
 class CreatePages < ActiveRecord::Migration
   def change
     create_table :pages do |t|
-      t.string :title
+      t.string :name
       t.string :alias
-      t.string :description
-      t.string :keywords
-      t.string :content
+      t.text :content
+      t.boolean :hidden, default:0
 
       t.timestamps
     end

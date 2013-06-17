@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-  attr_accessible :content, :title, :background_uid, :background, :preview_image_uid, :preview_image, :preview_background, :description, :retained_preview_image, :retained_background
+  attr_accessible :content, :name, :intro, :background_uid, :background, :preview_image_uid, :preview_image, :preview_background, :retained_preview_image, :retained_background
   image_accessor :background
   image_accessor :preview_image
 

@@ -46,7 +46,7 @@ ActiveAdmin.register Project do
       f.input :preview_background, label:'Фоновый цвет при ховере'
     end
     f.inputs "Content" do
-      f.input :content, :label => false, as: :wysihtml5, commands: :all, blocks: :all
+      f.input :content, label:'Контент' , as: :text
     end
     f.actions
   end

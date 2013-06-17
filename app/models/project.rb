@@ -4,11 +4,15 @@ class Project < ActiveRecord::Base
   image_accessor :preview_image
 
   def background_url
-    self.background.url
+    if self.background_uid
+      self.background.url
+    end
   end
 
   def preview_image_url
-    self.preview_image.url
+    if self.preview_image_uid
+      self.preview_image.url
+    end
   end
 
 end

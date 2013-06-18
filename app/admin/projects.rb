@@ -13,10 +13,10 @@ ActiveAdmin.register Project do
         raw '<div style="width:100px;height:50px;background:'+bg.preview_background+'">&nbsp;</div>'
     end
     column 'Картинка превью', :background do |bg|
-      image_tag bg.background.thumb if bg.background?
+      image_tag bg.background.thumb_admin if bg.background?
     end
     column 'Большой фон', :preview_image do |bg|
-      image_tag bg.preview_image.thumb if bg.preview_image?
+      image_tag bg.preview_image.thumb_admin if bg.preview_image?
     end
     default_actions
   end
@@ -31,27 +31,15 @@ ActiveAdmin.register Project do
         raw '<div style="width:100px;height:50px;background:'+bg.preview_background+'">&nbsp;</div>'
       end
       row :preview_image do |bg|
-        image_tag bg.preview_image.thumb if bg.preview_image?
+        image_tag bg.preview_image.thumb_admin if bg.preview_image?
       end
       row :background do |bg|
-        image_tag bg.background.thumb if bg.background?
+        image_tag bg.background.thumb_admin if bg.background?
       end
     end
     active_admin_comments
   end
 
-  form html:{ multipart:true } do |f|
-    f.inputs "Основное" do
-      f.input :preview_image, label:'Маленькое фото для превью', as: :file
-      f.input :background, label:'Фоновое изображение для попапа', as: :file
-      f.input :name, label:'Заголовок проекта'
-      f.input :intro, input_html: {rows:3}, label:'Вводный текст'
-      f.input :preview_background, label:'Фоновый цвет при ховере'
-    end
-    f.inputs "Content" do
-      f.input :content, label:'Контент' , as: :text
-    end
-    f.actions
-  end
+  form partial: 'form'
 end
 

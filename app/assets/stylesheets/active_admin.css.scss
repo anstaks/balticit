@@ -28,8 +28,6 @@
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
 
-.dragonfly .input label {display:none;}
-.dragonfly legend {display:block !important; padding:10px !important;}
-.dragonfly legend label {display:block;}
-.dragonfly .input {padding:5px 0 5px 10px;}
-.dragonfly .component-url label {display:block;width:auto;padding:6px 10px 0 0;}
+.overflow {overflow: hidden;}
+.preview_image_float {float:left; margin:0 10px 0 0 !important; }
+.preview_image_delete {float:none !important; display: inline-block !important; font:11px Arial !important; padding-top:12px !important; color:#000 !important; cursor:pointer;}

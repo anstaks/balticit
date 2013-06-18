@@ -1,0 +1,26 @@
+<%= semantic_form_for [:admin, resource], html:{ multipart:true } do |f| %>
+  <%= f.inputs 'Основное' do %>
+    <li class="input optional overflow">
+      <%= f.label :preview_image, 'Изображение для портфолио' %>
+      <%= image_tag resource.preview_image.thumb_admin, class:'preview_image_float' if resource.preview_image? %>
+      <%= f.file_field :preview_image %><br>
+      <%=raw "<label class='preview_image_delete'> #{f.check_box :remove_preview_image} удалить изображение</label>" if resource.preview_image? %>
+    </li>
+
+    <li class="input optional overflow">
+      <%= f.label :background, 'Фоновое изображение для попапа' %>
+      <%= image_tag resource.background.thumb_admin, class:'preview_image_float' if resource.background? %>
+      <%= f.file_field :background %><br>
+      <%=raw "<label class='preview_image_delete'> #{f.check_box :remove_background} удалить изображение</label>" if resource.background? %>
+    </li>
+
+    <%= f.input :name, label:'Заголовок проекта' %>
+    <%= f.input :intro, input_html: {rows:3}, label:'Вводный текст' %>
+    <%= f.input :preview_background, label:'Фоновый цвет при ховере' %>
+  <% end %>
+  <%= f.inputs 'Контент' do %>
+    <%= f.input :content, label:'Контент' , as: :text %>
+  <% end %>
+  <%= f.actions %>
+<% end %>
+

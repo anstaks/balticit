@@ -23,8 +23,6 @@ $short-sprite-dimensions: true;
 .header-menu .item-2.active a {background:url(header-list-2.png) left 2px no-repeat;}
 .header-menu .item-3.active a {background:url(header-list-3.png) left 2px no-repeat;}
 
-.btop {color:#888;line-height:18px;padding-bottom:50px;}
-.btop .span4 {margin-top:15px;}
 .btop-first {padding:10px 0 0; border-top:2px solid #d4da3f; }
 .btop-second {padding:10px 0 0;border-top:2px solid #f6a54c; }
 .btop-third-vertical {display: table; width:100%; margin:0; }
@@ -32,7 +30,7 @@ a.btop-third-link {width:50%;display: table-cell; vertical-align:middle;  text-a
 .btop-third-link:first-child {border-right:1px solid #fee11c;}
 .btop-third-link:hover {background:#f0b26d;}
 
-
+.portfolio {padding-top:50px;}
 .portfolio-item {opacity:0;margin-bottom:2%; position: relative;overflow:hidden;}
 .portfolio-show {opacity:1;@include transition(opacity 0.5s linear);}
 .portfolio-first-line {margin-left:0 !important;}
@@ -56,7 +54,7 @@ a.btop-third-link {width:50%;display: table-cell; vertical-align:middle;  text-a
 a.project-close {background:url(close.png); width:33px; height:33px; float:right; text-decoration:none;}
 .project-body {color:#fff;overflow:hidden;padding:0 0px 0 0;}
 
-.content {min-height:300px;}
+.content {}
 .content h1 {font-size:26px;}
 
 .footer {padding:50px 0 20px 0; color:#888;}

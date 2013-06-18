@@ -63,9 +63,9 @@ ActiveRecord::Schema.define(:version => 20130618104646) do
     t.string   "name"
     t.text     "content"
     t.text     "intro"
-    t.string   "preview_image_uid"
+    t.string   "preview_image"
     t.string   "preview_background"
-    t.string   "background_uid"
+    t.string   "background"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end

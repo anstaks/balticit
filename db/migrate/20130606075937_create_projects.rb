@@ -4,9 +4,9 @@ class CreateProjects < ActiveRecord::Migration
       t.string :name
       t.text :content
       t.text :intro
-      t.string :preview_image_uid
+      t.string :preview_image
       t.string :preview_background
-      t.string :background_uid
+      t.string :background
 
       t.timestamps
     end

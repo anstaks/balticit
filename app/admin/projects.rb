@@ -12,11 +12,11 @@ ActiveAdmin.register Project do
     column 'Фон превью', :preview_background, sortable:false do |bg|
         raw '<div style="width:100px;height:50px;background:'+bg.preview_background+'">&nbsp;</div>'
     end
-    column 'Картинка превью', :background_uid do |bg|
-      image_tag bg.preview_image.thumb('100x100').url if bg.preview_image_uid
+    column 'Картинка превью', :background do |bg|
+      image_tag bg.background.thumb if bg.background?
     end
-    column 'Большой фон', :background_uid do |bg|
-      image_tag bg.background.thumb('100x100').url if bg.background_uid
+    column 'Большой фон', :preview_image do |bg|
+      image_tag bg.preview_image.thumb if bg.preview_image?
     end
     default_actions
   end
@@ -30,17 +30,20 @@ ActiveAdmin.register Project do
       row :preview_background do |bg|
         raw '<div style="width:100px;height:50px;background:'+bg.preview_background+'">&nbsp;</div>'
       end
-      row :background_uid do |bg|
-        image_tag bg.background.thumb('100x100').url if bg.background_uid
+      row :preview_image do |bg|
+        image_tag bg.preview_image.thumb if bg.preview_image?
+      end
+      row :background do |bg|
+        image_tag bg.background.thumb if bg.background?
       end
     end
     active_admin_comments
   end
 
-  form do |f|
+  form html:{ multipart:true } do |f|
     f.inputs "Основное" do
-      f.input :preview_image, label:'Маленькое фото для превью', as: :dragonfly, input_html: { components: [:preview, :upload ] }
-      f.input :background, label:'Фоновое изображение для попапа', as: :dragonfly, input_html: { components: [:preview, :upload ] }
+      f.input :preview_image, label:'Маленькое фото для превью', as: :file
+      f.input :background, label:'Фоновое изображение для попапа', as: :file
       f.input :name, label:'Заголовок проекта'
       f.input :intro, input_html: {rows:3}, label:'Вводный текст'
       f.input :preview_background, label:'Фоновый цвет при ховере'

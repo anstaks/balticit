@@ -8,7 +8,6 @@ gem 'rails', '3.2.13'
 gem 'mysql2'
 
 gem 'activeadmin',   '~> 0.5.0'
-gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'friendly_id'

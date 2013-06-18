@@ -1,20 +1,9 @@
 class Project < ActiveRecord::Base
-  attr_accessible :content, :name, :intro, :background_uid, :background, :preview_image_uid, :preview_image, :preview_background, :retained_preview_image, :retained_background
-  image_accessor :background
-  image_accessor :preview_image
+  attr_accessible :content, :name, :intro, :preview_background, :background, :preview_image
+
+  require 'carrierwave/orm/activerecord'
+  mount_uploader :background, BackgroundUploader
+  mount_uploader :preview_image, PreviewImageUploader
 
   validates :name, presence:true
-
-  def background_url
-    if self.background_uid
-      self.background.url
-    end
-  end
-
-  def preview_image_url
-    if self.preview_image_uid
-      self.preview_image.url
-    end
-  end
-
 end

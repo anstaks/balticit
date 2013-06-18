@@ -9,6 +9,8 @@ gem 'mysql2'
 
 gem 'activeadmin',   '~> 0.5.0'
 gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
+gem 'carrierwave'
+gem 'mini_magick'
 gem 'friendly_id'
 
 # Gems used only for assets and not required

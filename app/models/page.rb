@@ -3,6 +3,8 @@ class Page < ActiveRecord::Base
   belongs_to :seo
 
   accepts_nested_attributes_for :seo, :allow_destroy => true, :reject_if => :all_blank
+  validates :name, presence:true
+  validates :slug, presence:true, uniqueness:true
 
   extend FriendlyId
   friendly_id :slug

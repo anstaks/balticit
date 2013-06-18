@@ -3,6 +3,8 @@ class Project < ActiveRecord::Base
   image_accessor :background
   image_accessor :preview_image
 
+  validates :name, presence:true
+
   def background_url
     if self.background_uid
       self.background.url

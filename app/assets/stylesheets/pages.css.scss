@@ -30,7 +30,9 @@ a.btop-third-link {width:50%;display: table-cell; vertical-align:middle;  text-a
 .btop-third-link:first-child {border-right:1px solid #fee11c;}
 .btop-third-link:hover {background:#f0b26d;}
 
+
 .portfolio {padding-top:50px;}
+.portfolio-link {display:block; height:190px; background:#f9f9f9;}
 .portfolio-item {opacity:0;margin-bottom:2%; position: relative;overflow:hidden;}
 .portfolio-show {opacity:1;@include transition(opacity 0.5s linear);}
 .portfolio-first-line {margin-left:0 !important;}

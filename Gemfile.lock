@@ -71,6 +71,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (0.8.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
     chunky_png (1.2.8)
     code_analyzer (0.3.2)
       sexp_processor
@@ -167,6 +170,8 @@ GEM
       activesupport (~> 3.1)
       polyamorous (~> 0.5.0)
     mime-types (1.23)
+    mini_magick (3.6.0)
+      subexec (~> 0.2.1)
     mini_portile (0.5.0)
     multi_json (1.7.7)
     mysql2 (0.3.11)
@@ -237,6 +242,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    subexec (0.2.3)
     therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
       ref
@@ -268,6 +274,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   capybara
+  carrierwave
   coffee-rails (~> 3.2.1)
   compass-rails
   cucumber-rails
@@ -278,6 +285,7 @@ DEPENDENCIES
   friendly_id
   jquery-rails (~> 2.2.1)
   letter_opener
+  mini_magick
   mysql2
   quiet_assets
   rails (= 3.2.13)

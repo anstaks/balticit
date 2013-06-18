@@ -1,7 +1,7 @@
 Balticit::Application.routes.draw do
 
   #root :to => 'pages#home'
-  root :to => "pages#show", :slug => '1'
+  root :to => "pages#show", :slug => 'index'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

@@ -3,4 +3,4 @@
     <%=raw @page.content %>
   </div>
 </div>
-<%= render "shared/portfolio" if @page.id == 1 %>
+<%= render "shared/portfolio" if @page.slug == 'index' %>

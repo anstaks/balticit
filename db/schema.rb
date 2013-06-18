@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606075937) do
+ActiveRecord::Schema.define(:version => 20130618075911) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -53,7 +53,11 @@ ActiveRecord::Schema.define(:version => 20130606075937) do
     t.boolean  "hidden",     :default => false
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
+    t.integer  "seo_id"
   end
+
+  add_index "pages", ["seo_id"], :name => "index_pages_on_seo_id"
+  add_index "pages", ["slug"], :name => "index_pages_on_slug", :unique => true
 
   create_table "projects", :force => true do |t|
     t.string   "name"
@@ -64,6 +68,14 @@ ActiveRecord::Schema.define(:version => 20130606075937) do
     t.string   "background_uid"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
+  end
+
+  create_table "seos", :force => true do |t|
+    t.string   "title"
+    t.string   "keywords"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

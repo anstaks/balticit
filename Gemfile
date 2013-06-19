@@ -32,6 +32,7 @@ gem 'russian'
 
 gem 'unicorn'
 gem 'capistrano'
+gem 'whenever'
 
 group :development, :test do
   gem 'debugger'

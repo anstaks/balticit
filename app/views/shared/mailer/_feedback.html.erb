@@ -1,0 +1,12 @@
+<%= form_tag feedback_path, remote:true, method:"post", id:'feedback-form' do %>
+  <div class="modal-body">
+    <div class="divDialogElements">
+      <input class="input-block-level" name="feedback-email" type="text" />
+      <textarea rows="4" class="input-block-level" name="feedback-message" ></textarea>
+      </div>
+    </div>
+  <div class="modal-footer">
+    <%= submit_tag 'Отправить', :class => 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>

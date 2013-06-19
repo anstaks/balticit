@@ -1,16 +1,15 @@
 Balticit::Application.routes.draw do
-
-  mount Ckeditor::Engine => '/ckeditor'
-
-  #root :to => 'pages#home'
   root :to => "pages#show", :slug => 'index'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  mount Ckeditor::Engine => '/ckeditor'
+
   resources :pages
   resources :projects
   get ':slug' => 'pages#show', :as => :slug
+  post 'feedback' => 'mailer#feedback'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

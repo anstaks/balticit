@@ -5,5 +5,5 @@ class Project < ActiveRecord::Base
   mount_uploader :background, BackgroundUploader
   mount_uploader :preview_image, PreviewImageUploader
 
-  validates :name, presence:true
+  validates :name, presence: true
 end

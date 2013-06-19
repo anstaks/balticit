@@ -35,13 +35,12 @@ gem 'capistrano'
 gem 'whenever'
 gem 'exception_notification'
 
-group :development, :test do
-  gem 'debugger'
+group :test do
   gem 'rspec-rails'
-  gem 'database_cleaner'
   gem 'cucumber-rails', :require => false
   gem 'capybara'
-  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'simplecov', require: false
 end
 
 group :development do
@@ -54,6 +53,12 @@ group :development do
   gem 'letter_opener'
   #refactoring
   gem 'rails_best_practices', require: false
+end
+
+group :development, :test do
+  gem 'debugger'
+  gem 'ffaker'
+  gem 'factory_girl_rails'
 end
 
 # gem 'rename' | For rename project with one comand "rails g rename:app_to New-Name"

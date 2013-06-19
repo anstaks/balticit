@@ -1,0 +1,4 @@
+index:
+  name: Главная
+  slug: index
+  content: <%= Faker::HTMLIpsum.fancy_string %>

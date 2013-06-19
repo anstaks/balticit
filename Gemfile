@@ -59,6 +59,7 @@ group :development do
   gem 'quiet_assets'
   gem 'thin'
   gem 'letter_opener'
+  gem 'pry-rails', require: false
   #refactoring
   gem 'rails_best_practices', require: false
 end

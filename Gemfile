@@ -36,12 +36,21 @@ gem 'exception_notification'
 
 group :test do
   gem 'rspec-rails'
+
+  gem 'cucumber'
   gem 'cucumber-rails', :require => false
+  gem 'cucumber_factory'
+  gem 'cucumber-websteps'
+
   gem 'capybara'
   gem 'capybara-screenshot'
+
+  gem 'selenium-webdriver'
+
   gem 'headless'
   gem 'database_cleaner'
   gem 'simplecov', require: false
+
   gem 'action_mailer_cache_delivery'
   gem 'email_spec'
 end

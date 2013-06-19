@@ -1,3 +1,18 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+jQuery ->
+  $('#feedback-form').on 'ajax:success', ->
+    $(".notifications").notify(
+      message:
+        text: "Ваше сообщение успешно отправлено"
+      fadeOut:
+        enabled: true
+        delay: 5000
+    ).show()
+  $('#feedback-form').on 'ajax:error', ->
+    $(".notifications").notify(
+      type: 'error'
+      message:
+        text: "Извините, произошла ошибка"
+      fadeOut:
+        enabled: true
+        delay: 5000
+    ).show()

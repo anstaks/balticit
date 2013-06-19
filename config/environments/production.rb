@@ -48,9 +48,6 @@ Balticit::Application.configure do
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
 
-  # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
-
   # Enable threaded mode
   # config.threadsafe!
 
@@ -64,4 +61,19 @@ Balticit::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  config.middleware.use ExceptionNotifier,
+    email: {
+      email_prefix: "[Whatever] ",
+      email_format: :html,
+      sender_address: %{"notifier" <notifier@example.com>},
+      exception_recipients:
+        %w{ novoselov@balticit.ru smirnov@balticit.ru borzenko@balticit.ru
+            denis@balticit.ru pryahina@balticit.ru }
+    }
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.perform_deliveries = true
+
 end

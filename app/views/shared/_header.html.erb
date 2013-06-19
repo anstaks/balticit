@@ -4,20 +4,22 @@
       <div class="span12">
         <nav class="header-menu">
           <ul>
-          <!-- <li class="item-1 <%= cp(root_path) %>"><%= link_to content_tag(:span,'Проекты'), root_path %></li> -->
             <% Page.all.each do |page| %>
               <% unless page.hidden? %>
                 <% if page.slug == 'index' %>
-                  <li class="item-<%= (page.id).to_s %> <%= cp(root_path) %>"><%= link_to content_tag(:span,page.name), root_path %></li>
+                  <li class="item-<%= (page.id).to_s %> <%= cp(root_path) %>">
+                    <%= link_to content_tag(:span, page.name), root_path %>
+                  </li>
                 <% else %>
-                  <li class="item-<%= (page.id).to_s %> <%= cp(slug_path(page)) %>"><%= link_to content_tag(:span,page.name), slug_path(page) %></li>
+                  <li class="item-<%= (page.id).to_s %> <%= cp(slug_path(page)) %>">
+                    <%= link_to content_tag(:span, page.name), slug_path(page) %>
+                  </li>
                 <% end %>
               <% end %>
             <% end %>
           </ul>
-
         </nav>
-        <%= link_to image_tag("logo.png", :alt => 'BalticIT'), root_path, class:'header-logo' %>
+        <%= link_to image_tag("logo.png", :alt => 'BalticIT'), root_path, class: 'header-logo' %>
       </div>
     </div>
   </div>

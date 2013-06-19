@@ -39,6 +39,8 @@ group :test do
   gem 'rspec-rails'
   gem 'cucumber-rails', :require => false
   gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'headless'
   gem 'database_cleaner'
   gem 'simplecov', require: false
   gem 'action_mailer_cache_delivery'

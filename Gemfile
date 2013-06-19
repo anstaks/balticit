@@ -7,7 +7,7 @@ gem 'rails', '3.2.13'
 
 gem 'mysql2'
 
-gem 'activeadmin',   '~> 0.5.0'
+gem 'activeadmin',   '~> 0.6.0'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'friendly_id'
@@ -29,7 +29,7 @@ group :assets do
   gem 'eco'
 end
 
-gem 'jquery-rails', '~> 2.2.1'
+gem 'jquery-rails', '~> 2.3.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

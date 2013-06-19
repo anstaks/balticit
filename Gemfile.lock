@@ -65,6 +65,10 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
+    capistrano-unicorn (0.1.9)
+      capistrano
     capybara (2.1.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -255,6 +259,8 @@ GEM
     ruby-progressbar (1.1.1)
     russian (0.6.0)
       i18n (>= 0.5.0)
+    rvm-capistrano (1.3.1)
+      capistrano (>= 2.0.0)
     sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -312,6 +318,8 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   capistrano
+  capistrano-ext
+  capistrano-unicorn
   capybara
   capybara-screenshot
   carrierwave
@@ -338,6 +346,7 @@ DEPENDENCIES
   rails_best_practices
   rspec-rails
   russian
+  rvm-capistrano
   sass-rails (~> 3.2.3)
   sextant
   simplecov

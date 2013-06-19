@@ -31,7 +31,6 @@ gem 'jquery-rails', '~> 2.3.0'
 gem 'russian'
 
 gem 'unicorn'
-gem 'capistrano'
 gem 'whenever'
 gem 'exception_notification'
 
@@ -48,6 +47,11 @@ group :test do
 end
 
 group :development do
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano-unicorn'
+  gem 'rvm-capistrano'
+
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'rack-mini-profiler'

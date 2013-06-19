@@ -1,7 +1,5 @@
-// Place all the styles related to the Mailer controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 @import "compass";
+$short-sprite-dimensions: true;
 
 @mixin input-placeholder($color,$style,$weight) {
   &::-webkit-input-placeholder{color:$color !important; font-style:$style !important; font-weight:$weight !important;}

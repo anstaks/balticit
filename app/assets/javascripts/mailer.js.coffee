@@ -6,10 +6,14 @@ isEmail = (email) ->
 jQuery ->
   $('#feedback-form').on 'ajax:beforeSend', ->
     unless isEmail($('#feedback-email').val())
-      noty text: 'Введите правильный e-mail'
+      noty
+        text: 'Введите правильный e-mail'
+        type: 'error'
       return false
     if $('#feedback-message').val().length < 10
-      noty text: 'Ваше сообщение cлишком короткое'
+      noty
+        text: 'Ваше сообщение cлишком короткое'
+        type: 'error'
       return false
   $('#feedback-form').on 'ajax:success', ->
     noty text: 'Ваше сообщение успешно отправлено'

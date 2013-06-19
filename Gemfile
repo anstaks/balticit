@@ -41,6 +41,8 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'simplecov', require: false
+  gem 'action_mailer_cache_delivery'
+  gem 'email_spec'
 end
 
 group :development do

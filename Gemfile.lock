@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    action_mailer_cache_delivery (0.3.5)
+      actionmailer (>= 3.0)
     actionmailer (3.2.13)
       actionpack (= 3.2.13)
       mail (~> 2.5.3)
@@ -125,6 +127,9 @@ GEM
       eco-source
       execjs
     eco-source (1.1.0.rc.1)
+    email_spec (1.4.0)
+      launchy (~> 2.1)
+      mail (~> 2.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
     exception_notification (3.0.1)
@@ -298,6 +303,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  action_mailer_cache_delivery
   activeadmin (~> 0.6.0)
   better_errors
   binding_of_caller
@@ -312,6 +318,7 @@ DEPENDENCIES
   database_cleaner
   debugger
   eco
+  email_spec
   exception_notification
   factory_girl_rails
   ffaker

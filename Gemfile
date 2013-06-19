@@ -14,8 +14,6 @@ gem 'friendly_id'
 gem 'ckeditor'
 gem 'noty-rails'
 
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -23,7 +21,6 @@ group :assets do
   gem 'compass-rails'
   gem 'bootstrap-sass'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
@@ -32,36 +29,56 @@ group :assets do
 end
 
 gem 'jquery-rails', '~> 2.3.0'
+gem 'russian'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'unicorn'
+gem 'whenever'
+gem 'exception_notification'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-group :development, :test do
-  gem 'debugger'
+group :test do
   gem 'rspec-rails'
-  gem 'database_cleaner'
+
+  gem 'cucumber'
   gem 'cucumber-rails', :require => false
+  gem 'cucumber_factory'
+  gem 'cucumber-websteps'
+
   gem 'capybara'
-  gem 'factory_girl_rails'
+  gem 'capybara-screenshot'
+
+  gem 'selenium-webdriver'
+
+  gem 'headless'
+  gem 'database_cleaner'
+  gem 'simplecov', require: false
+
+  gem 'action_mailer_cache_delivery'
+  gem 'email_spec'
 end
 
 group :development do
+  gem 'capistrano'
+  gem 'capistrano-ext'
+  gem 'capistrano-unicorn'
+  gem 'rvm-capistrano'
+
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'rack-mini-profiler'
+  gem 'sextant'
   gem 'quiet_assets'
   gem 'thin'
   gem 'letter_opener'
+  gem 'pry-rails', require: false
+  gem 'brakeman', require: false
   #refactoring
   gem 'rails_best_practices', require: false
+end
+
+group :development, :test do
+  gem 'debugger'
+  gem 'ffaker'
+  gem 'factory_girl_rails'
 end
 
 # gem 'rename' | For rename project with one comand "rails g rename:app_to New-Name"

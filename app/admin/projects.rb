@@ -10,7 +10,7 @@ ActiveAdmin.register Project do
     column 'Заголовок', :name
     column 'Вводный текст', :intro, sortable:false
     column 'Фон превью', :preview_background, sortable:false do |bg|
-        raw '<div style="width:100px;height:50px;background:'+bg.preview_background+'">&nbsp;</div>'
+      raw '<div style="width:100px;height:50px;background:'+bg.preview_background+'">&nbsp;</div>'
     end
     column 'Картинка превью', :background do |bg|
       image_tag bg.background.thumb_admin if bg.background?

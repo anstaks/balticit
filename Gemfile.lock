@@ -95,7 +95,7 @@ GEM
       ffi (~> 1.0, >= 1.0.11)
     chronic (0.9.1)
     chunky_png (1.2.8)
-    ckeditor (4.0.2)
+    ckeditor (4.0.4)
       mime-types
       orm_adapter
     code_analyzer (0.3.2)
@@ -308,8 +308,7 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     sexp_processor (4.2.1)
-    sextant (0.2.3)
-      activesupport (>= 3.2)
+    sextant (0.2.4)
       rails (>= 3.2)
     simplecov (0.7.1)
       multi_json (~> 1.0)

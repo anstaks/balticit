@@ -19,7 +19,7 @@
     <%= f.input :preview_background, label:'Фоновый цвет при ховере' %>
   <% end %>
   <%= f.inputs 'Контент' do %>
-    <%= f.input :content, label:'Контент' , as: :text %>
+    <%= f.input :content, label:'Контент' , as: :ckeditor %>
   <% end %>
   <%= f.actions %>
 <% end %>

@@ -34,7 +34,7 @@ ActiveAdmin.register Page do
       f.input :hidden, label:"Скрыть пункт меню"
     end
     f.inputs "Контент" do
-      f.input :content, label:"Контент", as: :text
+      f.input :content, label:"Контент", as: :ckeditor
     end
     f.inputs "SEO" do  # Настройка полей SEO
       f.semantic_fields_for :seo do |j|

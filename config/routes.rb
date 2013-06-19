@@ -1,5 +1,7 @@
 Balticit::Application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
+
   #root :to => 'pages#home'
   root :to => "pages#show", :slug => 'index'
 

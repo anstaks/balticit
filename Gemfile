@@ -33,6 +33,7 @@ gem 'russian'
 gem 'unicorn'
 gem 'capistrano'
 gem 'whenever'
+gem 'exception_notification'
 
 group :development, :test do
   gem 'debugger'

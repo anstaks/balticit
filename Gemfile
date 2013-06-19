@@ -60,6 +60,7 @@ group :development do
   gem 'thin'
   gem 'letter_opener'
   gem 'pry-rails', require: false
+  gem 'brakeman'
   #refactoring
   gem 'rails_best_practices', require: false
 end

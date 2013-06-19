@@ -1,3 +1,20 @@
 // Place all the styles related to the Mailer controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "compass";
+
+@mixin input-placeholder($color,$style,$weight) {
+  &::-webkit-input-placeholder{color:$color !important; font-style:$style !important; font-weight:$weight !important;}
+  &:placeholder{color:$color !important; font-style:$style !important; font-weight:$weight !important;}
+  &:-ms-input-placeholder {color:$color !important; font-style:$style !important; font-weight:$weight !important;}
+  &:-moz-placeholder {color:$color !important; font-style:$style !important; font-weight:$weight !important;}
+}
+
+.feedback {width:330px; margin:0 auto; position:relative; padding:20px 0 0; border:1px solid #eaeaea;@include border-radius(6px); margin-top:50px; @include box-sizing(border-box);}
+.feedback-bg {background:image-url('feedback-bg.png') left top no-repeat; position:absolute; top:-43px; left:0px; width:195px; height:167px;z-index: 3;}
+.feedback-controls {position: relative; z-index: 5; padding:0 20px 10px; @include box-sizing(border-box);}
+.feedback-control {@include input-placeholder(#cccccc,italic,200);}
+.feedback-notification {margin:0 auto; width:330px;}
+.feedback-form {margin: 0;}
+.feedback-btn {@include background-image(linear-gradient(#f6b27b 30%, #e4995c)); border:1px solid #e8a168; display:block; width:100% !important;@include box-sizing(content-box);padding:20px 0; text-align:center; position:relative; margin:0 0 -1px -1px;@include border-radius(0 0 6px 6px); font:14px Trebuchet MS,Arial,sans-serif; color:#fff; text-transform: uppercase; letter-spacing:1px;@include single-text-shadow(1px,1px,1px,false,#c87b3f);}
+.feedback-btn:hover {@include background-image(linear-gradient(#f9aa6a 30%, #f58e3c)); }

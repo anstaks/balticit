@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-modal
-//= require bootstrap-notify
 //= require jquery.mCustomScrollbar
 //= require jquery.mousewheel
 //= require_tree .

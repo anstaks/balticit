@@ -1,0 +1,22 @@
+<% layouts = Dir.entries(Rails.root.join("app", "views", "layouts")).keep_if { |i| i =~ /.html.erb$/ }.each{|i| i.slice! ".html.erb"} %>
+
+<%= semantic_form_for [:admin, resource] do |f| %>
+  <%= f.inputs "Основное" do %>
+    <%= f.input :name, label:'Заголовок для меню' %>
+    <%= f.input :slug, label:'Псевдоним для seo' %>
+    <%= f.input :hidden, label:"Скрыть пункт меню" %>
+    <li class="input optional overflow">
+      <%= f.label :preview_image, 'Шаблон для страницы' %>
+      <%= f.collection_select :layout, layouts, :to_s, :to_s, :prompt => "Select a Country" %>
+    </li>
+  <% end %>
+  <%= f.inputs "Контент" do %>
+    <%= f.input :content, label:"Контент", as: :ckeditor %>
+  <% end %>
+  <%= f.inputs "SEO" do %>
+    <%= f.semantic_fields_for :seo do |j| %>
+      <%= j.inputs :title, :keywords, :description %>
+    <% end %>
+  <% end %>
+  <%= f.actions %>
+<% end %>

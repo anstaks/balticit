@@ -27,21 +27,5 @@ ActiveAdmin.register Page do
     default_actions
   end
 
-  form do |f|
-    f.inputs "Основное" do
-      f.input :name, label:'Заголовок для меню'
-      f.input :slug, label:'Псевдоним для seo'
-      f.input :hidden, label:"Скрыть пункт меню"
-    end
-    f.inputs "Контент" do
-      f.input :content, label:"Контент", as: :ckeditor
-    end
-    f.inputs "SEO" do  # Настройка полей SEO
-      f.semantic_fields_for :seo do |j|
-        j.inputs :title, :keywords, :description
-      end
-    end
-    f.actions
-  end
-
+  form partial: 'form'
 end

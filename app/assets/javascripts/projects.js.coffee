@@ -7,7 +7,7 @@ $(document).ready ->
   isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)
   $(".portfolio-link").on "click", (event) ->
     id = $(this).parent().data().id
-    $.ajax "/projects/#{id}",
+    $.ajax "/ru/projects/#{id}",  # need to make better
       method: 'get'
     .done (data) ->
       console.log(data)

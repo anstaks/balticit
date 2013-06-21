@@ -13,6 +13,7 @@ gem 'mini_magick'
 gem 'friendly_id'
 gem 'ckeditor'
 gem 'noty-rails'
+gem 'route_translator'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

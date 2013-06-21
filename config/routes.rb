@@ -1,6 +1,6 @@
 Balticit::Application.routes.draw do
 
-  match '/' => redirect('/ru') # need to make better
+  root :to => "pages#show", :slug => 'index', locale:'en'
 
   mount Ckeditor::Engine => '/ckeditor'
 
@@ -11,13 +11,8 @@ Balticit::Application.routes.draw do
 
   localized do
     root :to => "pages#show", :slug => 'index'
+    get ':slug' => 'pages#show', :as => :slug
     resources :pages
     resources :projects
-    get ':slug' => 'pages#show', :as => :slug
   end
-end
-
-RouteTranslator.config do |config| # need to move to another file
-  config.force_locale = true
-  config.locale_param_key = :locale
 end

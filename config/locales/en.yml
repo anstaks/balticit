@@ -4,3 +4,5 @@
 en:
   footer:
     text: "BalticIT Company"
+  js:
+    project_prefix: ""

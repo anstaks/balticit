@@ -1,3 +1,5 @@
 ru:
   footer:
     text: "Компания BalticIT"
+  js:
+    project_prefix: "/ru"

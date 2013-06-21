@@ -16,3 +16,5 @@
 //= require jquery.mCustomScrollbar
 //= require jquery.mousewheel
 //= require_tree .
+//= require i18n
+//= require i18n/translations

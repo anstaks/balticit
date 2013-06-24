@@ -15,6 +15,7 @@ gem 'ckeditor'
 gem 'noty-rails'
 gem 'route_translator'
 gem 'i18n-js', :github => 'fnando/i18n-js'
+gem 'globalize3'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

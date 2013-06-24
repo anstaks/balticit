@@ -10,9 +10,18 @@
       <%= f.collection_select :layout, layouts, :to_s, :to_s, :prompt => "Select a Country" %>
     </li>
   <% end %>
-  <%= f.inputs "Контент" do %>
-    <%= f.input :content, label:"Контент", as: :ckeditor %>
+
+  <% index = 0 %>
+  <%= f.semantic_fields_for :translations do |lf| %>
+    <div id="lang-<%= lf.object.locale %>" style="<%= 'display: none;' if lf.object.locale == :ru %>">
+      <%= lf.inputs "#{ADDITIONAL_LOCALES[lf.object.locale.to_sym]} Text" do %>
+        <%= lf.input :content %>
+        <%= lf.input :locale, :as => :hidden %>
+      <% end %>
+    </div>
+    <% index += 1 %>
   <% end %>
+
   <%= f.inputs "SEO" do %>
     <%= f.semantic_fields_for :seo do |j| %>
       <%= j.inputs :title, :keywords, :description %>

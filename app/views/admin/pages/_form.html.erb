@@ -11,11 +11,15 @@
     </li>
   <% end %>
 
+  <% ADDITIONAL_LOCALES.each do |key, value| %>
+    <%= raw "<a href='#' data-lang='#{key}' class='lang-switch #{key}'>#{value}</a>"  %>
+  <% end %>
+
   <% index = 0 %>
   <%= f.semantic_fields_for :translations do |lf| %>
-    <div id="lang-<%= lf.object.locale %>" style="<%= 'display: none;' if lf.object.locale == :ru %>">
+    <div class="lang-form <%= lf.object.locale %>">
       <%= lf.inputs "#{ADDITIONAL_LOCALES[lf.object.locale.to_sym]} Text" do %>
-        <%= lf.input :content %>
+        <%= lf.input :content, as: :ckeditor %>
         <%= lf.input :locale, :as => :hidden %>
       <% end %>
     </div>

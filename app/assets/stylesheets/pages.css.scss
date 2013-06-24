@@ -8,7 +8,7 @@ $short-sprite-dimensions: true;
 .wrapper-modal {padding:0 330px 0 0; @include box-sizing(border-box); position:relative; z-index:10; }
 
 .header {}
-.header .span12 {padding:40px 0px 40px 0px;}
+.header .span12 {padding:40px 0px 40px 0px; position: relative;}
 .header-logo {}
 .header-menu {float:right; padding:36px 0 0 0;}
 .header-menu ul {margin:0; padding:0; list-style: none;}
@@ -55,6 +55,12 @@ a.btop-third-link {width:50%;display: table-cell; vertical-align:middle;  text-a
 .project-header-p {font-size:13px; }
 a.project-close {background:url(close.png); width:33px; height:33px; float:right; text-decoration:none;}
 .project-body {color:#fff;overflow:hidden;padding:0 0px 0 0;}
+
+.lang {position: absolute; top:0; right:0; margin:0; padding:0; list-style: none;}
+.lang-ru,.lang-en {float:left; margin:5px 0 0 5px; }
+.lang-a {float:left; width:16px; height:11px; background:url(flags.png) left top no-repeat; text-decoration: none;}
+a.lang-a:hover {text-decoration: none;}
+.lang-en .lang-a {background-position: left bottom;}
 
 .contacts-table {width:100%; font-size:15px;}
 .contacts-table td:first-child {width:36%;}

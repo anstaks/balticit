@@ -16,6 +16,8 @@ gem 'noty-rails'
 gem 'route_translator'
 gem 'i18n-js', :github => 'fnando/i18n-js'
 gem 'globalize3'
+gem 'ActiveAdmin-Globalize3-inputs'
+
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -32,6 +34,7 @@ group :assets do
 end
 
 gem 'jquery-rails', '~> 2.3.0'
+gem 'jquery-ui-rails'
 gem 'russian'
 
 gem 'unicorn'

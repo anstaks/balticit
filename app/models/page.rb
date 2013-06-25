@@ -9,6 +9,11 @@ class Page < ActiveRecord::Base
   translates :content
   accepts_nested_attributes_for :translations
 
+
+  class Translation
+    validates :content, presence: true
+  end
+
   extend FriendlyId
   friendly_id :slug
 end

@@ -6,3 +6,6 @@ en:
     text: "BalticIT Company"
   js:
     project_prefix: ""
+  translation:
+    en: "English"
+    ru: "Русский"

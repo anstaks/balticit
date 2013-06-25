@@ -3,3 +3,6 @@ ru:
     text: "Компания BalticIT"
   js:
     project_prefix: "/ru"
+  translation:
+    en: "English"
+    ru: "Русский"

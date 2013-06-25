@@ -8,6 +8,9 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    ActiveAdmin-Globalize3-inputs (0.0.1)
+      activeadmin
+      globalize3
     action_mailer_cache_delivery (0.3.5)
       actionmailer (>= 3.0)
     actionmailer (3.2.13)
@@ -201,6 +204,9 @@ GEM
     jquery-rails (2.3.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (4.0.3)
+      jquery-rails
+      railties (>= 3.1.0)
     json (1.8.0)
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
@@ -375,6 +381,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ActiveAdmin-Globalize3-inputs
   action_mailer_cache_delivery
   activeadmin (~> 0.6.0)
   better_errors
@@ -406,6 +413,7 @@ DEPENDENCIES
   headless
   i18n-js!
   jquery-rails (~> 2.3.0)
+  jquery-ui-rails
   letter_opener
   mini_magick
   mysql2

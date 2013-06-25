@@ -11,20 +11,15 @@
     </li>
   <% end %>
 
-  <% ADDITIONAL_LOCALES.each do |key, value| %>
-    <%= raw "<a href='#' data-lang='#{key}' class='lang-switch #{key}'>#{value}</a>"  %>
-  <% end %>
-
-  <% index = 0 %>
-  <%= f.semantic_fields_for :translations do |lf| %>
-    <div class="lang-form <%= lf.object.locale %>">
-      <%= lf.inputs "#{ADDITIONAL_LOCALES[lf.object.locale.to_sym]} Text" do %>
+  <div class="globalize-inputs">
+    <%= f.globalize_inputs :translations do |lf| %>
+      <%= lf.inputs do %>
         <%= lf.input :content, as: :ckeditor %>
+
         <%= lf.input :locale, :as => :hidden %>
       <% end %>
-    </div>
-    <% index += 1 %>
-  <% end %>
+    <% end %>
+  </div>
 
   <%= f.inputs "SEO" do %>
     <%= f.semantic_fields_for :seo do |j| %>

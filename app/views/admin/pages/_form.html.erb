@@ -2,7 +2,6 @@
 
 <%= semantic_form_for [:admin, resource] do |f| %>
   <%= f.inputs "Основное" do %>
-    <%= f.input :name, label:'Заголовок для меню' %>
     <%= f.input :slug, label:'Псевдоним для seo' %>
     <%= f.input :hidden, label:"Скрыть пункт меню" %>
     <li class="input optional overflow">
@@ -14,7 +13,8 @@
   <div class="globalize-inputs">
     <%= f.globalize_inputs :translations do |lf| %>
       <%= lf.inputs do %>
-        <%= lf.input :content, as: :ckeditor %>
+        <%= lf.input :name, input_html: {rows:1}, label: 'Заголовок страницы' %>
+        <%= lf.input :content, as: :ckeditor, label: 'Контент' %>
 
         <%= lf.input :locale, :as => :hidden %>
       <% end %>

@@ -406,6 +406,7 @@ DEPENDENCIES
   factory_girl_rails
   ffaker
   friendly_id
+  globalize3
   headless
   i18n-js!
   jquery-rails (~> 2.3.0)

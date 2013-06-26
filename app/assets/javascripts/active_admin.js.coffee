@@ -2,6 +2,7 @@
 jQuery ->
   customTabs $('.globalize-content')
   customTabs $('.globalize-seo')
+  customTabs $('.globalize-project')
 
 
 customTabs = (parent) ->

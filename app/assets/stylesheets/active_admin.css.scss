@@ -32,6 +32,9 @@
 .preview_image_float {float:left; margin:0 10px 0 0 !important; }
 .preview_image_delete {float:none !important; display: inline-block !important; font:11px Arial !important; padding-top:12px !important; color:#000 !important; cursor:pointer;}
 
+.lang-form {display:none;}
+.lang-switch {padding:6px 15px !important; background:#f7f7f7; border:1px solid #fff !important; border-bottom:none !important;display: inline-block; color:#000 !important; text-decoration:none !important;}
+.lang-switch-active {background:#eee; border:1px solid #CDCDCD !important; border-bottom:none !important;}
 .globalize-inputs > div > div {display: none;}
 .globalize-inputs .language-selection li {padding:6px 15px; background:#f7f7f7; border:1px solid #fff; border-bottom:none;display: inline-block; color:#000; text-decoration:none; margin:0 0 0 4px;}
 .globalize-inputs .language-selection li.active {background:#eee; border:1px solid #E6E6E6; border-bottom:none;}

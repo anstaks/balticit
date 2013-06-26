@@ -13,14 +13,21 @@
       <%= f.file_field :background %><br>
       <%=raw "<label class='preview_image_delete'> #{f.check_box :remove_background} удалить изображение</label>" if resource.background? %>
     </li>
-
-    <%= f.input :name, label:'Заголовок проекта' %>
-    <%= f.input :intro, input_html: {rows:3}, label:'Вводный текст' %>
     <%= f.input :preview_background, label:'Фоновый цвет при ховере' %>
   <% end %>
-  <%= f.inputs 'Контент' do %>
-    <%= f.input :content, label:'Контент' , as: :ckeditor %>
-  <% end %>
+
+  <div class="globalize-inputs globalize-project">
+    <%= f.globalize_inputs :translations do |lf| %>
+      <%= lf.inputs do %>
+        <%= lf.input :name, input_html: {rows:1}, label:'Заголовок проекта' %>
+        <%= lf.input :intro, input_html: {rows:3}, label:'Вводный текст' %>
+        <%= lf.input :content, label:'Контент' , as: :ckeditor %>
+
+        <%= lf.input :locale, :as => :hidden %>
+      <% end %>
+    <% end %>
+  </div>
+
   <%= f.actions %>
 <% end %>
 

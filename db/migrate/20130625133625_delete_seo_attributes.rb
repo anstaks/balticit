@@ -6,8 +6,8 @@ class DeleteSeoAttributes < ActiveRecord::Migration
   end
 
   def down
-    add_column :seos, :title
-    add_column :seos, :keywords
-    add_column :seos, :description
+    add_column :seos, :title, :string
+    add_column :seos, :keywords, :string
+    add_column :seos, :description, :string
   end
 end

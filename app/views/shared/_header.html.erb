@@ -3,12 +3,12 @@
     <div class="row-fluid">
       <div class="span12">
         <ul class="lang">
-          <li class="lang-ru">
-            <a class="lang-a" href="/ru">&nbsp;</a>
-          </li>
-          <li class="lang-en">
-            <a class="lang-a" href="/">&nbsp;</a>
-          </li>
+          <% I18n.available_locales.each do |locale| %>
+            <% locale = locale.to_s %>
+            <li class="lang-all lang-<%= locale %> <%= 'lang-active' if I18n.locale.to_s == locale %>">
+              <%= link_to('', url_for(action: params[:action], controller: params[:controller], locale:locale), class:'lang-a') %>
+            </li>
+          <% end %>
         </ul>
         <nav class="header-menu">
           <ul>

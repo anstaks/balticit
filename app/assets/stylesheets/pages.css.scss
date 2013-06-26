@@ -56,11 +56,12 @@ a.btop-third-link {width:50%;display: table-cell; vertical-align:middle;  text-a
 a.project-close {background:url(close.png); width:33px; height:33px; float:right; text-decoration:none;}
 .project-body {color:#fff;overflow:hidden;padding:0 0px 0 0;}
 
-.lang {position: absolute; top:0; right:60px; margin:0; padding:0; list-style: none;}
-.lang-ru,.lang-en {float:left; margin:5px 0 0 5px; }
-.lang-a {float:left; width:16px; height:11px; background:url(flags.png) left top no-repeat; text-decoration: none;}
-a.lang-a:hover {text-decoration: none;}
+.lang {position: absolute; top:-25px; right:0px; margin:0; padding:0; list-style: none;}
+.lang-ru,.lang-en {float:left; margin:5px 0 0 5px;  }
+.lang-a {float:left; width:16px; height:11px; background:url(flags.png) left top no-repeat; text-decoration: none !important;}
 .lang-en .lang-a {background-position: left bottom;}
+.lang-all {padding:4px 5px 6px; background:#ddd; @include border-radius(0 0 6px 6px);}
+.lang-active {background:#C7D647;}
 
 .btop-container-height {overflow:hidden;}
 

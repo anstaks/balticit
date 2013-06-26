@@ -1,0 +1,8 @@
+<ul class="lang">
+  <% I18n.available_locales.each do |locale| %>
+    <% locale = locale.to_s %>
+    <li class="lang-all lang-<%= locale %> <%= 'lang-active' if I18n.locale.to_s == locale %>">
+      <%= link_to '', url_for(action: params[:action], controller: params[:controller], locale:locale), class:'lang-a' %>
+    </li>
+  <% end %>
+</ul>

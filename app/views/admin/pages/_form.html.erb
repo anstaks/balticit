@@ -10,7 +10,7 @@
     </li>
   <% end %>
 
-  <div class="globalize-inputs">
+  <div class="globalize-inputs globalize-content">
     <%= f.globalize_inputs :translations do |lf| %>
       <%= lf.inputs do %>
         <%= lf.input :name, input_html: {rows:1}, label: 'Заголовок страницы' %>
@@ -21,10 +21,20 @@
     <% end %>
   </div>
 
-  <%= f.inputs "SEO" do %>
-    <%= f.semantic_fields_for :seo do |j| %>
-      <%= j.inputs :title, :keywords, :description %>
-    <% end %>
+
+  <%= f.semantic_fields_for :seo do |j| %>
+    <div class="globalize-inputs globalize-seo">
+      <%= j.globalize_inputs :translations do |lf| %>
+        <%= lf.inputs do %>
+          <%= lf.input :title, input_html: {rows:1} %>
+          <%= lf.input :keywords, input_html: {rows:1} %>
+          <%= lf.input :description, input_html: {rows:1} %>
+
+          <%= lf.input :locale, :as => :hidden %>
+        <% end %>
+      <% end %>
+    </div>
   <% end %>
+
   <%= f.actions %>
 <% end %>

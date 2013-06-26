@@ -7,18 +7,18 @@ jQuery ->
   $('#feedback-form').on 'ajax:beforeSend', ->
     unless isEmail($('#feedback-email').val())
       noty
-        text: 'Введите правильный e-mail'
+        text: I18n.t('js.wrong_email')
         type: 'error'
       return false
     if $('#feedback-message').val().length < 10
       noty
-        text: 'Ваше сообщение cлишком короткое'
+        text: I18n.t('js.short_message')
         type: 'error'
       return false
   $('#feedback-form').on 'ajax:success', ->
-    noty text: 'Ваше сообщение успешно отправлено'
+    noty text: I18n.t('js.send_success')
   $('#feedback-form').on 'ajax:error', ->
     noty
-      text: 'Произошла ошибка'
+      text: I18n.t('js.send_error')
       type: 'error'
 

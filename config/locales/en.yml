@@ -1,11 +1,16 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
   footer:
     text: "BalticIT Company"
+  mailer:
+    email: "Enter your e-mail"
+    message: "Your message"
+    send: "Send"
   js:
     project_prefix: ""
+    wrong_email: "Your e-mail in wrong"
+    short_message: "Your message too short"
+    send_success: "Your message in sending!"
+    send_error: "Error"
   translation:
     en: "English"
     ru: "Русский"

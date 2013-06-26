@@ -2,9 +2,9 @@
   <%= form_tag feedback_path, remote:true, method:"post", id:'feedback-form', class:'feedback-form' do %>
     <div class="feedback-bg"></div>
     <div class="feedback-controls">
-      <input class="input-block-level feedback-control" name="feedback-email" id="feedback-email" placeholder="Ваш e-mail" type="text" />
-      <textarea rows="4" class="input-block-level feedback-control" name="feedback-message" id="feedback-message" placeholder="Ваше сообщение" ></textarea>
+      <input class="input-block-level feedback-control" name="feedback-email" id="feedback-email" placeholder="<%= t('mailer.email') %>" type="text" />
+      <textarea rows="4" class="input-block-level feedback-control" name="feedback-message" id="feedback-message" placeholder="<%= t('mailer.message') %>" ></textarea>
     </div>
-    <%= submit_tag 'Отправить', class:'feedback-btn' %>
+    <%= submit_tag t('mailer.send'), class:'feedback-btn' %>
   <% end %>
 </div>

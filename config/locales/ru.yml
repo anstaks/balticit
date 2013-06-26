@@ -1,8 +1,16 @@
 ru:
   footer:
     text: "Компания BalticIT"
+  mailer:
+    email: "Введите ваш e-mail"
+    message: "Введите ваше сообщение"
+    send: "Отправить"
   js:
     project_prefix: "/ru"
+    wrong_email: "Введите правильный e-mail"
+    short_message: "Ваше сообщение cлишком короткое"
+    send_success: "Ваше сообщение успешно отправлено"
+    send_error: "Произошла ошибка"
   translation:
     en: "English"
     ru: "Русский"

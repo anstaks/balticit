@@ -1,3 +1,3 @@
 $(document).ready ->
-  $(".btop-third-link").height $("#btop-first").height() + 10
+  $(".btop-third-link").height $("#btop-container").height() - 5
 

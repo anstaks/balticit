@@ -8,13 +8,6 @@ describe Page do
     page.should be_valid
   end
 
-  describe '#name' do
-    it "should be non-empty" do
-      page.name = '           '
-      page.should be_invalid
-    end
-  end
-
   describe '#slug' do
     it 'should be non-empty' do
       page.slug = '           '

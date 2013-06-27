@@ -1,4 +1,6 @@
 index:
-  name: Главная
+  id: 1
   slug: index
-  content: <%= Faker::HTMLIpsum.fancy_string %>
+
+
+

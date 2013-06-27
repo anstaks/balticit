@@ -1,0 +1,18 @@
+index_en:
+  page_id: 1
+  locale: en
+  name: Projects
+  content: <%= Faker::HTMLIpsum.fancy_string %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+index_ru:
+  page_id: 1
+  locale: ru
+  name: Главная
+  content: <%= Faker::HTMLIpsum.fancy_string %>
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+
+
+

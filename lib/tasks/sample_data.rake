@@ -3,7 +3,7 @@ namespace :db do
   desc "Fill database with sample data"
   task sample_data: :environment do
     Page.create!(slug: "index") unless Page.find_by_slug('index')
-    Page::Translation.where(page_id:Page.find_by_slug('index'),locale:'ru').create!(
+    Page::Translation.where(page_id: Page.find_by_slug('index'), locale: 'ru').create!(
       name: 'Проекты',
       content:'
       <div id="btop-container" class="btop-container-height">
@@ -21,7 +21,7 @@ namespace :db do
         </div>
       </div>
     ')
-    Page::Translation.where(page_id:Page.find_by_slug('index'),locale:'en').create!(
+    Page::Translation.where(page_id: Page.find_by_slug('index'), locale: 'en').create!(
       name: 'Projects',
       content:'
       <div id="btop-container" class="btop-container-height">
@@ -40,7 +40,7 @@ namespace :db do
       </div>
     ')
     Page.create!(slug: "contacts")
-    Page::Translation.where(page_id:Page.find_by_slug('contacts'),locale:'en').create!(
+    Page::Translation.where(page_id: Page.find_by_slug('contacts'), locale: 'en').create!(
       name: 'Contacts',
       content:'
       <table class="contacts-table">
@@ -61,7 +61,7 @@ namespace :db do
         </tbody>
       </table>
     ')
-    Page::Translation.where(page_id:Page.find_by_slug('contacts'),locale:'ru').create!(
+    Page::Translation.where(page_id: Page.find_by_slug('contacts'), locale: 'ru').create!(
       name: 'Контакты',
       content:'
       <table class="contacts-table">
